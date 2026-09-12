@@ -1,17 +1,46 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Watermark Studio</title></head><body><script>window.__wmParts=[];</script>
-<script src="parts/part-01.js"></script>
-<script src="parts/part-02.js"></script>
-<script src="parts/part-03.js"></script>
-<script src="parts/part-04.js"></script>
-<script src="parts/part-05.js"></script>
-<script src="parts/part-06.js"></script>
-<script src="parts/part-07.js"></script>
-<script src="parts/part-08.js"></script>
-<script src="parts/part-09.js"></script>
-<script src="parts/part-10.js"></script>
-<script src="parts/part-11.js"></script>
-<script src="parts/part-12.js"></script>
-<script src="parts/part-13.js"></script>
-<script src="parts/part-14.js"></script>
-<script>const html=window.__wmParts.join('');document.open();document.write(html);document.close();</script></body></html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Watermark Studio v2.3.3</title>
+<style>
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#F2F1ED;color:#252421}body{display:grid;place-items:center}.loading{width:min(420px,calc(100vw - 48px));padding:28px;border:1px solid rgba(37,36,33,.08);border-radius:24px;background:rgba(255,255,255,.58);box-shadow:0 18px 54px rgba(49,45,37,.075)}h1{font-size:18px;margin:0 0 8px}p{font-size:12px;color:#625E57;margin:0;line-height:1.6}.bar{height:6px;margin-top:18px;border-radius:999px;background:#E7E4DD;overflow:hidden}.bar:after{content:"";display:block;height:100%;width:42%;border-radius:inherit;background:#4A9D91;animation:load 1.1s ease-in-out infinite alternate}@keyframes load{to{transform:translateX(138%)}}.error{color:#D96B61}
+</style>
+</head>
+<body>
+<div class="loading" id="loading"><h1>Watermark Studio</h1><p>正在载入 v2.3.3...</p><div class="bar"></div></div>
+<script>window.__wmB64=[];</script>
+<script src="data/chunk-01.js"></script>
+<script src="data/chunk-02.js"></script>
+<script src="data/chunk-03.js"></script>
+<script src="data/chunk-04.js"></script>
+<script src="data/chunk-05.js"></script>
+<script src="data/chunk-06.js"></script>
+<script src="data/chunk-07.js"></script>
+<script src="data/chunk-08.js"></script>
+<script src="data/chunk-09.js"></script>
+<script src="data/chunk-10.js"></script>
+<script src="data/chunk-11.js"></script>
+<script src="data/chunk-12.js"></script>
+<script>
+(async()=>{
+  try{
+    if(typeof DecompressionStream==='undefined') throw new Error('当前浏览器缺少 gzip 解压能力，请使用最新版 Chrome、Edge、Firefox 或 Safari。');
+    const b64=window.__wmB64.join('');
+    const raw=atob(b64);
+    const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
+    const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    const html=await new Response(stream).text();
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(err){
+    const box=document.getElementById('loading');
+    if(box) box.innerHTML='<h1>Watermark Studio</h1><p class="error">载入失败：'+String(err&&err.message||err)+'</p>';
+    console.error(err);
+  }
+})();
+</script>
+</body>
+</html>
